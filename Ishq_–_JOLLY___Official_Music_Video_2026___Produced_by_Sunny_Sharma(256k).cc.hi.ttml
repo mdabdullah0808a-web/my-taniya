@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tt xml:lang="hi" xmlns="http://www.w3.org/ns/ttml" xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" ttp:profile="http://www.w3.org/TR/profile/sdp-us" >
+<head>
+<styling>
+<style xml:id="s1" tts:textAlign="center" tts:extent="90% 90%" tts:origin="5% 5%" tts:displayAlign="after"/>
+<style xml:id="s2" tts:fontSize=".72c" tts:backgroundColor="black" tts:color="white"/>
+</styling>
+<layout>
+<region xml:id="r1" style="s1"/>
+</layout>
+</head>
+<body region="r1">
+<div>
+<p begin="00:00:16.160" end="00:00:23.039" style="s2">दिन ये फिर दिन बन जाए दिल से जब दिल मिल</p>
+<p begin="00:00:19.600" end="00:00:27.199" style="s2">जाए देखी है राहें संग तेरे जिन पर हूं</p>
+<p begin="00:00:23.039" end="00:00:30.160" style="s2">चलना चाहे आंखों पे फैला काजल हाथों से छ</p>
+<p begin="00:00:27.199" end="00:00:36.160" style="s2">लूं क्या मैं बिखरी जो जुल्फे तेरी तेरी</p>
+<p begin="00:00:30.160" end="00:00:40.000" style="s2">इनको सवार दूं क्या हुक्म इतना जता</p>
+<p begin="00:00:36.160" end="00:00:44.480" style="s2">लूंगा मैं अपना बना</p>
+<p begin="00:00:40.000" end="00:00:49.200" style="s2">जाना ना जाना ना जाने जा बे फका तेरे बिन</p>
+<p begin="00:00:44.480" end="00:00:53.440" style="s2">सारा जग तो जहां वे देख मेनु फेरी ना फेरी</p>
+<p begin="00:00:49.200" end="00:00:56.440" style="s2">ना तू निगाह वे जाने जा ना जाई ना जाई ना</p>
+<p begin="00:00:53.440" end="00:00:56.440" style="s2">दूर</p>
+<p begin="00:01:04.159" end="00:01:11.760" style="s2">इश्क किताब ना कोई जिसको फिर कोई पढ़ लेगा</p>
+<p begin="00:01:08.159" end="00:01:16.240" style="s2">ख्वाबों का शीशा साथ दिखे लगे ना ठोकर फिर</p>
+<p begin="00:01:11.760" end="00:01:20.960" style="s2">कभी होकर फिर साथ तेरे लिखने है किस्से कई</p>
+<p begin="00:01:16.240" end="00:01:24.240" style="s2">लिखने हैं अफसाने तेरी कहानियां जिसमें तू</p>
+<p begin="00:01:20.960" end="00:01:28.000" style="s2">करती बातें तेरी शैतानियां</p>
+<p begin="00:01:24.240" end="00:01:32.000" style="s2">आगे तू हक जता</p>
+<p begin="00:01:28.000" end="00:01:36.720" style="s2">जाना ना जाना ना जाने जा बे मैं फिका तेरे</p>
+<p begin="00:01:32.000" end="00:01:40.799" style="s2">बिन सारा जग तो ज मैं देख मेनु फेरी ना</p>
+<p begin="00:01:36.720" end="00:01:45.000" style="s2">फेरी ना तू निगाह बे जाने जा ना जाई ना</p>
+<p begin="00:01:40.799" end="00:01:45.000" style="s2">जाई ना दूर ना</p>
+<p begin="00:01:54.720" end="00:02:02.840" style="s2">कुछ कहना चाह चाहे दिल में तू रहना चाहे</p>
+<p begin="00:01:58.159" end="00:02:02.840" style="s2">लूंगा मैं अपना बना</p>
+</div>
+</body>
+</tt>
