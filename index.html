@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Taniya ❤️</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;overflow-x:hidden;
+ background:radial-gradient(circle at top,#47101d,#100509 65%,#000);
+ color:white;font-family:Georgia,serif;text-align:center;
+}
+h1{color:#ff456b;text-shadow:0 0 18px #ff1744;margin-top:35px}
+.subtitle{color:#f5bdc9;letter-spacing:2px}
+.scene{height:330px;display:flex;align-items:center;justify-content:center;perspective:1000px}
+.envelope{
+ position:relative;width:280px;height:180px;
+ background:linear-gradient(140deg,#c90036,#700019);
+ border-radius:5px;cursor:pointer;
+ box-shadow:0 15px 40px #000,0 0 25px #ff174455;
+ transform-style:preserve-3d;
+}
+.envelope:before{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(145deg,transparent 49%,#8e0029 50%);
+ clip-path:polygon(0 0,50% 55%,100% 0);
+ z-index:4;
+}
+.envelope:after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(35deg,#a90030,#e51a50);
+ clip-path:polygon(0 100%,50% 48%,100% 100%);
+ z-index:3;
+}
+.flap{
+ position:absolute;inset:0;
+ background:linear-gradient(140deg,#ff315e,#a0002b);
+ clip-path:polygon(0 0,100% 0,50% 58%);
+ transform-origin:top;transition:transform 1s ease;
+ z-index:5;
+}
+.seal{
+ position:absolute;top:72px;left:calc(50% - 24px);
+ width:48px;height:48px;border-radius:50%;
+ background:radial-gradient(circle,#ff9aaa,#a0002b 70%);
+ z-index:6;display:grid;place-items:center;
+ font-size:25px;box-shadow:0 0 15px #ff6688;
+}
+.paper{
+ position:absolute;width:90%;height:150px;left:5%;top:10px;
+ background:#fff0e7;color:#7b102c;border-radius:4px;
+ padding:15px;transition:transform 1.2s ease;
+ z-index:2;overflow:hidden;
+}
+.paper span{font-size:23px}
+.open .flap{transform:rotateX(180deg);z-index:1}
+.open .seal{opacity:0;transition:opacity .3s}
+.open .paper{transform:translateY(-135px);z-index:7}
+.hint{color:#ffc0cd;margin-top:-5px}
+.letter{
+ display:none;max-width:520px;margin:0 auto 25px;
+ padding:24px 22px;background:#fff0e7;color:#641027;
+ border:2px solid #e9a0b0;border-radius:12px;
+ box-shadow:0 0 30px #ff174455;line-height:1.8;
+ animation:appear 1.2s ease;
+}
+.open~.letter{display:block}
+.letter h2{color:#b00037}
+.letter p{font-size:17px}
+@keyframes appear{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+.controls{margin:20px auto 45px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+button{
+ border:1px solid #ff6688;background:linear-gradient(120deg,#b00035,#5b001b);
+ color:white;padding:13px 22px;border-radius:30px;
+ font-size:15px;cursor:pointer;box-shadow:0 0 15px #ff174455;
+}
+button:active{transform:scale(.96)}
+.petal{
+ position:fixed;top:-30px;z-index:10;pointer-events:none;
+ animation:fall linear forwards;
+}
+@keyframes fall{
+ 0%{transform:translateY(-20px) rotate(0deg);opacity:1}
+ 100%{transform:translateY(110vh) rotate(720deg);opacity:0}
+}
+.footer{color:#e9a0b0;font-size:13px;padding-bottom:25px}
+</style>
+</head>
+<body>
+
+<h1>For My Love Taniya ❤️</h1>
+<p class="subtitle">A LETTER FROM MY HEART</p>
+
+<div class="scene">
+ <div>
+  <div class="envelope" id="envelope" onclick="openLetter()">
+   <div class="paper"><span>💌</span><br>For My Jaan...</div>
+   <div class="flap"></div>
+   <div class="seal">❤️</div>
+  </div>
+  <p class="hint">Tap the letter to open 💌</p>
+ </div>
+</div>
+
+<div class="letter" id="letter">
+ <h2>Meri Jaan Taniya ❤️</h2>
+ <p>
+ Tum meri zindagi ka woh hissa ho jise main kabhi khona nahi chahta.
+ Tumhari muskurahat meri khushi hai aur tumhari awaaz mere dil ka sukoon.
+ </p>
+ <p>
+ Main nahi jaanta ki main tumhe kitna khush rakh paunga,
+ lekin ek baat jaanta hoon, meri feelings tumhare liye hamesha sachchi rahengi.
+ </p>
+ <p>
+ Chahe kitni bhi dooriyan aa jayein, tum mere dil ke sabse kareeb rahogi.
+ </p>
+ <h2>I Love You So Much, Meri Jaan! 🌹</h2>
+ <p>Forever Yours,<br><b>Abdullah ❤️</b></p>
+</div>
+
+<div class="controls">
+ <button onclick="toggleMusic()" id="musicButton">🎵 Play Our Song</button>
+ <button onclick="openLetter()">💌 Open Love Letter</button>
+</div>
+
+<audio id="music" src="ishq.mp3" loop preload="auto"></audio>
+
+<div class="footer">Made with endless love ❤️ For Taniya</div>
+
+<script>
+let opened=false;
+function openLetter(){
+ if(opened)return;
+ opened=true;
+ document.getElementById('envelope').classList.add('open');
+ document.getElementById('letter').style.display='block';
+ setTimeout(()=>{
+  document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'center'});
+ },700);
+ for(let i=0;i<45;i++)setTimeout(createPetal,i*100);
+}
+function createPetal(){
+ const p=document.createElement('div');
+ p.className='petal';
+ p.textContent=['🌹','🌸','❤️','🌺'][Math.floor(Math.random()*4)];
+ p.style.left=Math.random()*100+'vw';
+ p.style.fontSize=(15+Math.random()*18)+'px';
+ p.style.animationDuration=(4+Math.random()*5)+'s';
+ document.body.appendChild(p);
+ setTimeout(()=>p.remove(),10000);
+}
+const music=document.getElementById('music');
+async function toggleMusic(){
+ const btn=document.getElementById('musicButton');
+ if(music.paused){
+  try{
+   await music.play();
+   btn.textContent='⏸ Pause Our Song';
+  }catch(e){
+   btn.textContent='❌ Song could not play';
+   alert('Song play hocche na. ishq.mp3 file check koro.');
+  }
+ }else{
+  music.pause();
+  btn.textContent='🎵 Play Our Song';
+ }
+}
+</script>
+</body>
+</html>
